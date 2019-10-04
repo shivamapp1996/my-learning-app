@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function setvalue(a) {
+            document.getElementById("result").value+=a.value;
+          }
+          
+          // Clears calculator input screen
+          function clearScreen() {
+            document.getElementById("result").value="";
+          }
+         
+          
+          // Calculates input values
+          function getValue() {
+            document.getElementById("result").value= eval(document.getElementById("result").value);
+              
+            }
+          
+</script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+      
+        button {
+          display: inline-block;
+          width:50px;
+          height: 40px;
+          margin:1px;
+          
+        }
+        input {
+          display: inline-block;
+          width: 86%;
+          height: 40px;
+          margin:2px;
+        }
+        
+      
+
+        </style>
+               
+</head>
+<body>
+   
+<div class="container">
+        
+ <div class="row">
+ <h1>Bootstrap Calculator<h1>
+ </div>
+<div class="row">
+    <div class="col-md-3">
+        
+ <input type="text" class="screen text-right" id="result" readonly>
+ </div>
+ </form>
+ </div>
+   
+ <div class="row">
+        <div class="col-md-3">
+               
+ <button  type="button" value ="Ac"class="btn btn-danger" onclick="clearScreen()">Ac</button>
+ <button  type="button" value ="CE" class="btn btn-warning" onclick="clearScreen()">CE</button>
+ <button  type="button" value ="%" class="btn btn-info" onclick="setvalue(this)">%</button>
+ <button  type="button" value ="/" class="btn btn-info" onclick="setvalue(this)">/</button> 
+      </div> 
+ </div>
+
+ <div class="row">
+        <div class="col-md-3">     
+ <button  type="button" value ="1" class="btn btn-info" onclick="setvalue(this)">1</button>
+ <button  type="button" value ="2" class="btn btn-info" onclick="setvalue(this)">2</button>
+ <button  type="button" value ="3" class="btn btn-info" onclick="setvalue(this)">3</button>
+ <button  type="button" value ="+" class="btn btn-info" onclick="setvalue(this)">+</button>
+ </div>
+ </div>
+ <div class="row"> 
+        <div class="col-md-3">     
+ <button  type="button" value ="4" class="btn btn-info" onclick="setvalue(this)">4</button>
+ <button  type="button" value ="5" class="btn btn-info" onclick="setvalue(this)">5</button>
+ <button  type="button" value ="6" class="btn btn-info" onclick="setvalue(this)">6</button>
+ <button  type="button" value ="-" class="btn btn-info" onclick="setvalue(this)">-</button>
+</div>
+</div>
+<div class="row">
+        <div class="col-md-3">        
+ <button  type="button" value ="7" class="btn btn-info" onclick="setvalue(this)">7</button>
+ <button  type="button" value ="8" class="btn btn-info" onclick="setvalue(this)">8</button>
+ <button  type="button" value ="9" class="btn btn-info" onclick="setvalue(this)">9</button>
+ <button  type="button" value ="*" class="btn btn-info" onclick="setvalue(this)">*</button>
+ </div>
+ </div>
+    
+ <div class="row">
+        <div class="col-md-3">
+      
+ <button  type="button" value ="0" class="btn btn-info" onclick="setvalue(this)">0</button>
+ <button  type="button" value ="." class="btn btn-info" onclick="setvalue(this)">.</button>
+ <button  type="button" value ="=" class="btn btn-success" onclick="getValue()">=</button>
+ </div>
+  </div>
+  </div>
+  </body>
+  </html>   
+  
